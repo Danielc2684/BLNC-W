@@ -3,18 +3,17 @@ import { CartProvider } from './context/CartContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CartPanel from './components/CartPanel';
+import ScrollToTop from "./components/ScrollToTop"
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Checkout from './pages/Checkout';
-import Memberships from './pages/Memberships';
-import Subscriptions from './pages/Subscriptions';
-import Events from './pages/Events';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <CartProvider>
         <div className="min-h-screen bg-gray-50 flex flex-col">
           <Header />
@@ -23,9 +22,6 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/checkout" element={<Checkout />} />
-              <Route path="/memberships" element={<Memberships />} />
-              <Route path="/subscriptions" element={<Subscriptions />} />
-              <Route path="/events" element={<Events />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

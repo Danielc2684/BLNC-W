@@ -1,18 +1,21 @@
 import { Heart, Target, Users } from 'lucide-react';
+import owner from '/blnc-owner-photo.png';
 
 export default function About() {
   return (
     <div className="min-h-screen bg-soft-gray">
       <div className="bg-vital-green text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">About Us</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4">About Me</h1>
           <p className="text-xl text-vital-green-100">
             Empowering healthier lifestyles, one shake at a time
           </p>
         </div>
       </div>
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className='flex justify-center'>
+        <img src={owner} alt="owner" className='mt-8 w-40 h-40 md:w-56 md:h-56 rounded-full object-cover shadow-lg'/>
+      </div>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-xl shadow-sm p-8 mb-12">
           <h2 className="text-3xl font-bold text-charcoal mb-6">Our Story</h2>
           <div className="prose prose-lg text-charcoal-600 space-y-4">

@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
+import { RiTiktokLine } from "react-icons/ri";
 
 export default function Footer() {
   return (
@@ -18,8 +19,6 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="/menu" className="hover:text-vital-green transition-colors">Menu</a></li>
-              <li><a href="/memberships" className="hover:text-vital-green transition-colors">Memberships</a></li>
-              <li><a href="/events" className="hover:text-vital-green transition-colors">Events</a></li>
               <li><a href="/about" className="hover:text-vital-green transition-colors">About</a></li>
             </ul>
           </div>
@@ -27,9 +26,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact (Demo)</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>123 Wellness Way</li>
-              <li>Healthy City, HC 12345</li>
-              <li>(555) 123-4567</li>
+              <li>832 W Lantana Rd</li>
+              <li>Lantana, FL 33462</li>
+              <li>(561) 255-4154</li>
               <li>demo@bestlifenutrition.com</li>
             </ul>
           </div>
@@ -37,27 +36,42 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <button className="text-gray-400 hover:text-vital-green transition-colors">
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/people/Best-life-nutrition-club/61573613227123/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-vital-green transition-colors"
+              >
                 <Facebook className="w-6 h-6" />
-              </button>
-              <button className="text-gray-400 hover:text-vital-green transition-colors">
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/bestlifenutrition__/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-vital-green transition-colors"
+              >
                 <Instagram className="w-6 h-6" />
-              </button>
-              <button className="text-gray-400 hover:text-vital-green transition-colors">
-                <Twitter className="w-6 h-6" />
-              </button>
+              </a>
+
+              {/* Tiktok */}
+              <a
+                href="https://www.tiktok.com/@leonorgnehm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-vital-green transition-colors"
+              >
+                <RiTiktokLine className="w-6 h-6" />
+              </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="bg-sunrise-orange-900/30 border border-sunrise-orange-700/50 rounded-lg p-4 mb-6">
-            <p className="text-sunrise-orange-100 text-sm text-center">
-              <strong>Demo Disclaimer:</strong> This website is a demonstration only. All products, pricing, memberships, and ordering flows are simulated for presentation purposes and are not real.
-            </p>
-          </div>
           <p className="text-center text-gray-400 text-sm">
-            © {new Date().getFullYear()} Best Life Nutrition Club. All rights reserved. Demo Version.
+            © {new Date().getFullYear()} Best Life Nutrition Club. All rights reserved.
           </p>
         </div>
       </div>

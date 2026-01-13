@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
+let mapPath = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.927424297386!2d-80.0602696!3d26.5867041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8d900720bbe43%3A0x25c0c8f550184bc6!2sBest%20Life%20Nutrition%20Club!5e0!3m2!1sen!2sus!4v1768347210271!5m2!1sen!2sus'
+
 export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -43,7 +45,7 @@ export default function Contact() {
           <div>
             <h2 className="text-3xl font-bold text-charcoal mb-6">Get in Touch</h2>
             <p className="text-charcoal-600 mb-8">
-              Have questions about our products, memberships, or events? We're here to help!
+              Have questions about our products? We're here to help!
               Fill out the form and we'll get back to you as soon as possible.
             </p>
 
@@ -55,8 +57,8 @@ export default function Contact() {
                 <div className="ml-4">
                   <h3 className="font-semibold text-charcoal mb-1">Visit Us</h3>
                   <p className="text-charcoal-600">
-                    123 Wellness Way<br />
-                    Healthy City, HC 12345
+                    832 W Lantana Rd<br />
+                    Lantana, FL 33462
                   </p>
                 </div>
               </div>
@@ -67,7 +69,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-charcoal mb-1">Call Us</h3>
-                  <p className="text-charcoal-600">(555) 123-4567</p>
+                  <p className="text-charcoal-600">(561) 255-4154</p>
                 </div>
               </div>
 
@@ -88,9 +90,9 @@ export default function Contact() {
                 <div className="ml-4">
                   <h3 className="font-semibold text-charcoal mb-1">Hours</h3>
                   <p className="text-charcoal-600">
-                    Monday - Friday: 7:00 AM - 7:00 PM<br />
-                    Saturday: 8:00 AM - 6:00 PM<br />
-                    Sunday: 9:00 AM - 5:00 PM
+                    Monday - Friday: 7:30 AM - 7:00 PM<br />
+                    Saturday: 8:00 AM - 7:00 PM<br />
+                    Sunday: Closed
                   </p>
                 </div>
               </div>
@@ -98,8 +100,7 @@ export default function Contact() {
 
             <div className="mt-8 aspect-video bg-gray-200 rounded-xl overflow-hidden">
               <div className="w-full h-full flex items-center justify-center text-gray-500">
-                <MapPin className="w-12 h-12 mr-2" />
-                <span className="text-lg">Map Placeholder</span>
+                <iframe src={mapPath} className='w-full h-full' loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>

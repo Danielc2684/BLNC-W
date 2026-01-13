@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useState } from 'react';
+import logo from '/blnc-logo-t.png';
 
 export default function Header() {
   const location = useLocation();
@@ -11,9 +12,6 @@ export default function Header() {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/menu', label: 'Menu' },
-    { path: '/memberships', label: 'Memberships' },
-    { path: '/subscriptions', label: 'Subscriptions' },
-    { path: '/events', label: 'Events' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' }
   ];
@@ -25,9 +23,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-charcoal">
-              Best Life <span className="text-vital-green">Nutrition Club</span>
-            </span>
+            <img src={logo} alt="Logo" className="h-10 w-20 object-contain rounded-full"/>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
