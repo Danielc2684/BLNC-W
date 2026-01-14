@@ -43,7 +43,7 @@ export const menuItems: MenuItem[] = [
     description: item.description,
     price: item.price,
     category: 'tea',
-    image: `/src/assets/blnc_lit_teas/${item.image}`,
+    image: `/assets/blnc_lit_teas/${item.image}`,
   })),
 
   // Food items
@@ -57,7 +57,7 @@ export const menuItems: MenuItem[] = [
     description: item.description,
     price: item.price,
     category: 'food',
-    image: `/src/assets/blnc_food/${item.image}`,
+    image: `/assets/blnc_food/${item.image}`,
   }))
 ];
 

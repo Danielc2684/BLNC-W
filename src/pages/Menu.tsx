@@ -12,6 +12,7 @@ export default function Menu() {
     { id: 'all', label: 'All Items' },
     { id: 'shake', label: 'Protein Shakes' },
     { id: 'tea', label: 'Energy Teas' },
+    { id: 'food', label: 'Food' },
     { id: 'booster', label: 'Wellness Boosters' },
     { id: 'addon', label: 'Add-Ons' }
   ];
