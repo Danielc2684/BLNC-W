@@ -32,6 +32,7 @@ export const menuItems: MenuItem[] = [
   ...[
     { image: 'smurf-up.png', name: 'Smurf Up', description: 'Blueberry and citrus energizing tea', price: 6.00 },
     { image: 'captain-america.png', name: 'Captain America', description: 'Refreshing tea with lemon and ginger', price: 6.50 },
+    { image: 'cotton-candy.png', name: 'Cotton Candy', description: 'Sugar-free cotton candy with protein', price: 5.00 },
     { image: 'cucumberita.png', name: 'Cucumberita', description: 'Cucumber and lime herbal tea', price: 5.50 },
     { image: 'dragon-slayer.png', name: 'Dragon Slayer', description: 'Spicy ginger and lemon tea with antioxidants', price: 6.00 },
     { image: 'fruitrollup.png', name: 'Fruit Roll-Up', description: 'Berry tea with a sweet, tangy twist', price: 6.00 },
@@ -48,7 +49,6 @@ export const menuItems: MenuItem[] = [
 
   // Food items
   ...[
-    { image: 'cotton-candy.png', name: 'Cotton Candy', description: 'Sugar-free cotton candy with protein', price: 5.00 },
     { image: 'protein-cookies.png', name: 'Protein Cookies', description: 'High-protein cookies with a sweet taste', price: 5.00 },
     { image: 'protein-waffles.png', name: 'Protein Waffles', description: 'Waffles packed with protein and flavor', price: 5.00 }
   ].map((item, index) => ({
