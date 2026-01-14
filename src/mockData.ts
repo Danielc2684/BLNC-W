@@ -25,7 +25,7 @@ export const menuItems: MenuItem[] = [
     description: item.description,
     price: item.price,
     category: 'shake',
-    image: `/src/assets/blnc_protein_shakes/${item.image}`,
+    image: `/assets/blnc_protein_shakes/${item.image}`,
   })),
   
   // Tea items
