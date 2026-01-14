@@ -1,88 +1,65 @@
 import { MenuItem, Testimonial } from './types';
 
 export const menuItems: MenuItem[] = [
-  {
-    id: '1',
-    name: 'Chocolate Dream Shake',
-    description: '24g protein, rich chocolate flavor with almond butter',
-    price: 8.50,
+  // Shake items
+  ...[
+    { image: 'banana-nuts.png', name: 'Banana Nuts', description: '24g protein, rich chocolate flavor with almond butter', price: 8.50 },
+    { image: 'banana-split.png', name: 'Banana Split', description: 'Classic banana split with a protein twist', price: 8.50 },
+    { image: 'birthday-cake.png', name: 'Birthday Cake', description: 'Cake flavored shake with sprinkles', price: 9.00 },
+    { image: 'captin-crunch.png', name: 'Captain Crunch', description: 'Crunchy cereal, banana, and protein blend', price: 8.50 },
+    { image: 'churro.png', name: 'Churro Shake', description: 'Cinnamon, sugar, and protein goodness', price: 8.50 },
+    { image: 'coco-choco.png', name: 'Coco Choco', description: 'Chocolate and coconut fusion shake', price: 8.50 },
+    { image: 'fruity-pebbles.png', name: 'Fruity Pebbles', description: 'Fruit cereal with a high-protein twist', price: 9.00 },
+    { image: 'key-west.png', name: 'Key West', description: 'Tropical mango, coconut, and protein mix', price: 8.50 },
+    { image: 'mango-pina.png', name: 'Mango Pina', description: 'Mango, pineapple, and coconut protein shake', price: 8.50 },
+    { image: 'minty-goddess.png', name: 'Minty Goddess', description: 'Peppermint, chocolate, and a protein boost', price: 8.50 },
+    { image: 'oreo-explosion.png', name: 'Oreo Explosion', description: 'Cookies and cream shake with a protein kick', price: 9.00 },
+    { image: 'pistachio-pale.png', name: 'Pistachio Pale', description: 'Pistachio-flavored protein shake', price: 8.50 },
+    { image: 'pumpkin-banana.png', name: 'Pumpkin Banana', description: 'Pumpkin and banana blend with 24g protein', price: 8.50 },
+    { image: 'rainbow.png', name: 'Rainbow Shake', description: 'Vibrant flavors with a high-protein base', price: 8.50 },
+    { image: 'strawberry-cheesecake.png', name: 'Strawberry Cheesecake', description: 'A fruity and creamy shake with 22g protein', price: 8.50 },
+    { image: 'vanillia-bean.png', name: 'Vanilla Bean', description: 'Rich vanilla shake with added protein', price: 8.50 }
+  ].map((item, index) => ({
+    id: `${index + 1}`,
+    name: item.name,
+    description: item.description,
+    price: item.price,
     category: 'shake',
-    image: 'https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: '2',
-    name: 'Berry Blast Shake',
-    description: 'Mixed berries, vanilla protein, antioxidant boost',
-    price: 8.50,
-    category: 'shake',
-    image: 'https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: '3',
-    name: 'Peanut Butter Power',
-    description: 'Peanut butter, banana, 26g protein',
-    price: 9.00,
-    category: 'shake',
-    image: 'https://images.pexels.com/photos/616833/pexels-photo-616833.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: '4',
-    name: 'Green Machine',
-    description: 'Spinach, mango, pineapple, protein',
-    price: 8.50,
-    category: 'shake',
-    image: 'https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: '5',
-    name: 'Tropical Thunder Tea',
-    description: 'Energizing tea with mango and pineapple',
-    price: 6.00,
+    image: `/src/assets/blnc_protein_shakes/${item.image}`,
+  })),
+  
+  // Tea items
+  ...[
+    { image: 'smurf-up.png', name: 'Smurf Up', description: 'Blueberry and citrus energizing tea', price: 6.00 },
+    { image: 'captain-america.png', name: 'Captain America', description: 'Refreshing tea with lemon and ginger', price: 6.50 },
+    { image: 'cucumberita.png', name: 'Cucumberita', description: 'Cucumber and lime herbal tea', price: 5.50 },
+    { image: 'dragon-slayer.png', name: 'Dragon Slayer', description: 'Spicy ginger and lemon tea with antioxidants', price: 6.00 },
+    { image: 'fruitrollup.png', name: 'Fruit Roll-Up', description: 'Berry tea with a sweet, tangy twist', price: 6.00 },
+    { image: 'passion-fruit.png', name: 'Passion Fruit', description: 'Tropical passion fruit tea', price: 6.00 },
+    { image: 'sex-on-the-beach.png', name: 'Sex On The Beach', description: 'Sweet and tangy fruit tea blend', price: 6.50 }
+  ].map((item, index) => ({
+    id: `${index + 18}`,
+    name: item.name,
+    description: item.description,
+    price: item.price,
     category: 'tea',
-    image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: '6',
-    name: 'Peach Fusion Tea',
-    description: 'Refreshing peach tea with natural energy boost',
-    price: 6.00,
-    category: 'tea',
-    image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: '7',
-    name: 'Berry Energy Tea',
-    description: 'Mixed berry tea with metabolism support',
-    price: 6.50,
-    category: 'tea',
-    image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: '8',
-    name: 'Immune Boost Shot',
-    description: 'Vitamin C and zinc wellness shot',
-    price: 4.00,
-    category: 'booster',
-    image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: '9',
-    name: 'Energy Plus',
-    description: 'Natural caffeine and B-vitamin boost',
-    price: 3.50,
-    category: 'addon',
-    image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: '10',
-    name: 'Collagen Beauty',
-    description: 'Collagen peptides for skin and hair',
-    price: 4.50,
-    category: 'addon',
-    image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=400'
-  }
-];
+    image: `/src/assets/blnc_lit_teas/${item.image}`,
+  })),
 
+  // Food items
+  ...[
+    { image: 'cotton-candy.png', name: 'Cotton Candy', description: 'Sugar-free cotton candy with protein', price: 5.00 },
+    { image: 'protein-cookies.png', name: 'Protein Cookies', description: 'High-protein cookies with a sweet taste', price: 5.00 },
+    { image: 'protein-waffles.png', name: 'Protein Waffles', description: 'Waffles packed with protein and flavor', price: 5.00 }
+  ].map((item, index) => ({
+    id: `${index + 26}`,
+    name: item.name,
+    description: item.description,
+    price: item.price,
+    category: 'food',
+    image: `/src/assets/blnc_food/${item.image}`,
+  }))
+];
 
 export const testimonials: Testimonial[] = [
   {

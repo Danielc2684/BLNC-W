@@ -58,11 +58,14 @@ export default function Menu() {
               key={item.id}
               className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:scale-105 overflow-hidden"
             >
+              <div className="w-full aspect-[16/9] relative">
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-48 object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
+              </div>
+
               <div className="p-6">
                 <h3 className="text-xl font-bold text-charcoal mb-2">{item.name}</h3>
                 <p className="text-charcoal-600 mb-4">{item.description}</p>
