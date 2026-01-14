@@ -13,8 +13,7 @@ export default function Menu() {
     { id: 'shake', label: 'Protein Shakes' },
     { id: 'tea', label: 'Energy Teas' },
     { id: 'food', label: 'Food' },
-    { id: 'booster', label: 'Wellness Boosters' },
-    { id: 'addon', label: 'Add-Ons' }
+    { id: 'booster', label: 'Wellness Boosters' }
   ];
 
   const filteredItems = activeCategory === 'all'

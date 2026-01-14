@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact (Demo)</h4>
+            <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>832 W Lantana Rd</li>
               <li>Lantana, FL 33462</li>

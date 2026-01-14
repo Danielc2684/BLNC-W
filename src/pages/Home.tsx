@@ -5,14 +5,14 @@ import { imageList } from '../assets/insta_photos/images';
 
 export default function Home() {
 
-  const instagramImages = [
-    'https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=400',
-    'https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg?auto=compress&cs=tinysrgb&w=400',
-    'https://images.pexels.com/photos/616833/pexels-photo-616833.jpeg?auto=compress&cs=tinysrgb&w=400',
-    'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=400',
-    'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=400',
-    'https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=400'
-  ];
+  // const instagramImages = [
+  //   'https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //   'https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //   'https://images.pexels.com/photos/616833/pexels-photo-616833.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //   'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //   'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //   'https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=400'
+  // ];
 
   return (
     <div>
@@ -30,7 +30,7 @@ export default function Home() {
                 to="/menu"
                 className="bg-vital-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-vital-green-700 transition-all transform hover:scale-105 shadow-lg"
               >
-                Order Online
+                Order Now
               </Link>
             </div>
           </div>
@@ -76,11 +76,15 @@ export default function Home() {
                 key={index}
                 className="aspect-square rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer"
               >
+                <a href="https://www.instagram.com/bestlifenutrition__/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer">
                 <img
                   src={image}
                   alt={`Instagram post ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
+                </a>
               </div>
             ))}
           </div>
