@@ -3,9 +3,11 @@ import { Plus } from 'lucide-react';
 import { menuItems } from '../mockData';
 import { useCart } from '../context/CartContext';
 import { MenuItem } from '../types';
+import ItemModal from '../components/ItemModal';
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const { addToCart } = useCart();
 
   const categories = [
@@ -52,13 +54,14 @@ export default function Menu() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:6">
           {filteredItems.map(item => (
             <div
               key={item.id}
-              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:scale-105 overflow-hidden"
+              onClick={() => setSelectedItem(item)}
+              className="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:scale-105 overflow-hidden"
             >
-              <div className="">
+              <div>
               <img
                 src={item.image}
                 alt={item.name}
@@ -74,11 +77,11 @@ export default function Menu() {
                     ${item.price.toFixed(2)}
                   </span>
                   <button
-                    onClick={() => handleAddToCart(item)}
+                    onClick={() => setSelectedItem(item)}
                     className="bg-vital-green text-white px-4 py-2 rounded-lg font-semibold hover:bg-vital-green-700 transition-all flex items-center gap-2"
                   >
                     <Plus className="w-5 h-5" />
-                    Add to Cart
+                    
                   </button>
                 </div>
               </div>
@@ -92,6 +95,13 @@ export default function Menu() {
           </div>
         )}
       </div>
+      {selectedItem && (
+        <ItemModal
+          item={selectedItem}
+          onClose={() => setSelectedItem(null)}
+          onAddToCart={handleAddToCart}
+        />
+      )}
     </div>
   );
 }

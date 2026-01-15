@@ -2,10 +2,14 @@ export interface MenuItem {
   id: string;
   name: string;
   description: string;
+  image: string;
   price: number;
   category: string;
-  image: string;
-}
+  options?: {
+    sizes?: { label: string; price: number }[];
+    addOns?: { label: string; price: number }[];
+  };
+};
 
 export interface CartItem extends MenuItem {
   quantity: number;
