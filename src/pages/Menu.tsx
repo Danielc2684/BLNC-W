@@ -13,7 +13,7 @@ export default function Menu() {
     { id: 'shake', label: 'Protein Shakes' },
     { id: 'tea', label: 'Energy Teas' },
     { id: 'food', label: 'Food' },
-    { id: 'booster', label: 'Wellness Boosters' }
+    { id: 'booster', label: 'Supplements' }
   ];
 
   const filteredItems = activeCategory === 'all'
@@ -58,11 +58,11 @@ export default function Menu() {
               key={item.id}
               className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:scale-105 overflow-hidden"
             >
-              <div className="w-full aspect-[16/9] relative">
+              <div className="">
               <img
                 src={item.image}
                 alt={item.name}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
               </div>
 

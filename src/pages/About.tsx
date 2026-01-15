@@ -1,5 +1,5 @@
 import { Heart, Target, Users } from 'lucide-react';
-import owner from '/blnc-owner-photo.png';
+import owner from '/blnc-owner-photo.webp';
 
 export default function About() {
   return (

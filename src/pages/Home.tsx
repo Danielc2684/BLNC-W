@@ -16,29 +16,26 @@ export default function Home() {
 
   return (
     <div>
-      <section className="relative bg-gradient-to-br from-vital-green-50 to-white py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl lg:text-7xl font-bold text-charcoal mb-6">
-              Best Life <span className="text-vital-green">Nutrition Club</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-charcoal-600 mb-8 max-w-3xl mx-auto">
-              Healthy Shakes • Energy Teas • Wellness Community
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/menu"
-                className="bg-vital-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-vital-green-700 transition-all transform hover:scale-105 shadow-lg"
-              >
-                Order Now
-              </Link>
-            </div>
-          </div>
-        </div>
+      <section className="relative min-h-[400px] lg:min-h-[400px] overflow-hidden">
+        <img
+          src="/blnc-banner.webp"
+          alt=""
+          className="absolute inset-0 w-full h-full"
+        />
       </section>
 
-
       <section className="py-20 bg-berry-pink-50">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="flex justify-center">
+            <Link
+              to="/menu"
+              className="bg-vital-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-vital-green-700 transition-all transform hover:scale-105 shadow-lg"
+            >
+              Order Now
+            </Link>
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-charcoal mb-12">
             What Our Customers Say

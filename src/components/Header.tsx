@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useState } from 'react';
-import logo from '/blnc-logo-t.png';
+import logo from '/blnc-logo-t.webp';
 
 export default function Header() {
   const location = useLocation();

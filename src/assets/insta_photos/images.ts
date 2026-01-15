@@ -1,2 +1,2 @@
-const images = import.meta.glob("./*.png", { eager: true })
+const images = import.meta.glob("./*.webp", { eager: true })
 export const imageList = Object.values(images).map((img: any) => img.default)
